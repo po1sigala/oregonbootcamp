@@ -11,13 +11,33 @@
 
     <script type="text/javascript">
       // TODO: Create a function called "adder" that takes three arguments (x, y, z) and returns their sum
-
+      function adder (x,y,z){
+        return x+y+z
+      }
       // TODO: Create a function called "multiplier" that takes three arguments (x, y, z) and returns their product
-
+function multiplier(x,y,z){
+  return x*y*z
+}
       // TODO: Create a function called "isString" that takes three arguments (x, y, z) and checks if the type of all three is a string
-
+function isString(x,y,z){
+  let result=false
+  if(typeof(x)==="string"&&typeof(y)==="string"&&typeof(z)==="string"){
+     result=true
+  }
+  return result
+}
       // TODO: Create a function called "vowelChecker" that takes one argument (x) and checks if the first letter is a vowel
-
+function vowelChecker(x){
+  let firstLeteer=x[0]
+  console.log(`first letter is ${firstLeteer}`)
+ 
+  let vowels=["a","e","i","o","u","A","E","I","O","U"]
+  console.log(vowels.indexOf(firstLeteer))
+  if(vowels.indexOf(firstLeteer)!==[-1]){
+    return true
+  }
+  else{return false}
+}
       // Check the browser console to see if the following is logged correctly
       var sum = adder(1, 2, 3);
 
