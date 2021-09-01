@@ -10,21 +10,31 @@
     </h1>
     <script type="text/javascript">
       // TODO: Create an array of the three game choices (Rock, Paper, or Scissors).
-      var gameChoices
+      var gameChoices=["rock","paper","scissors"]
 
       // TODO: Create variables to hold the number of wins, losses, and ties. They start at 0.
-      var
-      var
-      var
+      var wins=0
+      var losses = 0
+      var ties =0
 
       for (var i = 0; i < 3; i++) {
         // TODO: Randomly choose a choice from the gameChoices array. This is the computer's turn.
-        var computerTurn
+        var computerTurn=gameChoices[Math.floor(Math.random()*3)]
 
         // TODO: Collect the user's response and convert to lower case. This is the user's turn.
-        var userTurn
+        var userTurn=prompt("press r, p, or s for rock paper or scissors").toLowerCase()
 
         // TODO: Create the game logic to run if the user chooses a valid game choice
+        if(computerTurn==="scissors"&& userTurn==="s"){ties++}
+        if(computerTurn==="scissors"&& userTurn==="r"){wins++}
+        if(computerTurn==="scissors"&& userTurn==="p"){losses++}
+        if(computerTurn==="paper"&& userTurn==="s"){wins++}
+        if(computerTurn==="paper"&& userTurn==="r"){losses++}
+        if(computerTurn==="paper"&& userTurn==="p"){ties++}
+        if(computerTurn==="rock"&& userTurn==="s"){losses++}
+        if(computerTurn==="rock"&& userTurn==="r"){ties++}
+        if(computerTurn==="rock"&& userTurn==="p"){wins++}
+        alert(`wins:${wins} ties:${ties} Losses:${losses}`)
       }
 
       // TODO: When the game is over, alert the final total to the user. We can use the \n character to make a line break.
